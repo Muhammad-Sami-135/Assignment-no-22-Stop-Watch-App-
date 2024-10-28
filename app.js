@@ -2,6 +2,7 @@ var hourHeading = document.getElementById("hour")
 var minHeading = document.getElementById("min")
 var secHeading = document.getElementById("sec")
 var msecHeading = document.getElementById("msec")
+var startBtn = document.getElementById("startbtn")
 var hour = 0
 var min = 0
 var sec = 0
@@ -33,10 +34,12 @@ function timer() {
 
 function start() {
     interval = setInterval(timer, 10)
+    startBtn.disabled = true
 }
 
 function stop() {
     clearInterval(interval)
+    startBtn.disabled = false
 }
 
 function reset() {
